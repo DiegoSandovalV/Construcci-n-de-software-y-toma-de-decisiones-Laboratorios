@@ -1,1 +1,1 @@
-# Construcci-n-de-software-y-toma-de-decisiones-Laboratorios
+# Construccion-de-software-y-toma-de-decisiones-Laboratorios
