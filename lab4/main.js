@@ -1,6 +1,6 @@
 const table = () => {
 
-    const number = window.prompt("Enter a number: ");
+    const number = window.prompt("Introduce el numero hasta el cual veremos sus cuadrados y cubos: ");
     
     escritura = document.getElementById('tabla');
 
@@ -45,7 +45,7 @@ const contador = () => {
 
     let arr = [];
     for(let i = 0; i < tam; i++){
-        let num = window.prompt('Introduce un numero :)')
+        let num = window.prompt('Introduce un numero para el arreglo :)')
         arr.push(num);  
     }
 
@@ -65,17 +65,34 @@ const contador = () => {
     resultadoContador.innerHTML = `Positivos: ${positivos} Negativos: ${negativos} Ceros: ${ceros}`;
 };
 
-const promedio = (matriz) => {
-    
-    
-    
-    for(let i=0; i < matriz.length; i++){
-        let suma = 0;
-        for(let j=0; j < matriz[i].length; j++){
-            suma += matriz[i][j];
+const promedio = () => {
+
+    const promedioText = document.getElementById('promedios');
+
+    const filas = window.prompt('Cuantas filas quieres  en tu matriz?');
+    const col = window.prompt('Cuantas columnas quieres en tu matriz?');
+
+    let matriz = [];
+
+    for(let i=0; i < filas; i++){
+        matriz[i] = [];
+        for(let j=0; j < col; j++){
+            matriz[i][j] = window.prompt(`Introduce el numero de la fila ${i} y columna ${j}`);
         }
-        console.log(`Promedio de la fila ${i}: ${suma/matriz[i].length}`);
     }
+    
+    let text= '';
+    
+    for(let i=0; i < filas; i++){
+        let suma = 0;
+        for(let j=0; j < col; j++){
+            suma += parseInt(matriz[i][j]);
+        }
+        let promedio = suma / col;
+        text += `El promedio de la fila ${i} es: ${promedio} <br>`;
+    }
+
+    promedioText.innerHTML = text;
 };
 
 const invertirNum = () =>{
@@ -100,7 +117,28 @@ const invertirNum = () =>{
 
 };
 
-table();
+const serieFibonacci = () =>{
+    const fibonacciText = document.getElementById('fibonacci');
+
+    let num = window.prompt('Escribe el numero de la serie fibonacci que quieres');
+    let arr = [0,1];
+    let i = 2;
+    while(i < num){
+        arr.push(arr[i-1] + arr[i-2]);
+        i++;
+    }
+    
+    fibonacciText.innerHTML = `La serie fibonacci de los primeros ${num} numeros es: ${arr}`;
+
+}
+
+
+// alert('Bienvenido al laboratorio 4, vamos a jugar!');
+
+// table();
 // juegoSuma();
 // contador();
 // invertirNum();
+// promedio();
+// serieFibonacci();
+
