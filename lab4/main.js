@@ -133,12 +133,12 @@ const serieFibonacci = () =>{
 }
 
 
-// alert('Bienvenido al laboratorio 4, vamos a jugar!');
+alert('Bienvenido al laboratorio 4, vamos a jugar!');
 
-// table();
-// juegoSuma();
-// contador();
-// invertirNum();
-// promedio();
-// serieFibonacci();
+table();
+juegoSuma();
+contador();
+invertirNum();
+promedio();
+serieFibonacci();
 
