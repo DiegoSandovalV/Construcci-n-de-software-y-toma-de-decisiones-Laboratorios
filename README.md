@@ -13,8 +13,9 @@ Repositorio Individual
 - Ricardo Cortés Espionsa
 - Eduardo Daniel Juárez Pineda
 
-### Alumno
+### Alumnos
 
+Diego Ernesto Sandoval Vargas ~ A01709113
 Carlos Rodrigo Salguero Alcántara ~ A00833341
 
 ## Descripción
