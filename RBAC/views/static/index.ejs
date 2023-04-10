@@ -1,0 +1,59 @@
+<%- include("../include/header.ejs") %>
+
+<body>
+  <%- include("../include/navbar.ejs") %>
+
+  <main class="container is-fluid">
+    <div>
+      <h1 class="title">Michi's Password Validator</h1>
+      <h2 class="subtitle">Enter your username and password</h2>
+    </div>
+
+    <br />
+
+    <% if (mensaje) { %>
+     <div class="notification is-link is-light"><%= mensaje %></div>
+    <% } %>
+
+    <form id="formID" action="/" method="POST">
+      <div class="field">
+        <input type="hidden" name="_csrf" value="<%= csrfToken %>" />
+
+        <label class="label">Username</label>
+
+        <div class="control">
+          <input
+            class="input"
+            id="username"
+            name="username"
+            type="text"
+            placeholder="Enter your username: "
+          />
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Password</label>
+
+        <div class="control">
+          <input
+            class="input"
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter your password: "
+          />
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="control">
+          <input class="button is-link" type="submit" />
+        </div>
+      </div>
+    </form>
+  </main>
+</body>
+
+<!-- Footer -->
+<%- include("../include/footer.ejs") %>
